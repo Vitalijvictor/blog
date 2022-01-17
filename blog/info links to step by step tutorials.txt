@@ -1,0 +1,6 @@
+Уроки Java Spring Boot
+Гоша Дударь
+
+https://www.youtube.com/watch?v=FyZFK4LBjj0&list=PL0lO_mIqDDFUYDRzvocu5EsFGBqPM7CIw&index=1
+
+MVC - jpa - thymeleaf - mysql
