@@ -1,5 +1,6 @@
 package com.vitalijvictor.blog;
 
+import com.vitalijvictor.blog.securingweb.SecuringWebApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +10,4 @@ public class BlogApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BlogApplication.class, args);
 	}
-
 }

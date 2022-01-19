@@ -3,4 +3,5 @@
 
 https://www.youtube.com/watch?v=FyZFK4LBjj0&list=PL0lO_mIqDDFUYDRzvocu5EsFGBqPM7CIw&index=1
 
+Model — View — Controller
 MVC - jpa - thymeleaf - mysql

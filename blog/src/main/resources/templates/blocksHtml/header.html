@@ -11,12 +11,15 @@
             <a class="me-3 py-2 text-dark text-decoration-none" href="/blog">Blog</a>
             <a
                     class="me-3 py-2 text-dark text-decoration-none" href="/blog/add">Blog add</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="/about">About</a>
-            <a class="py-2 text-dark text-decoration-none" href="#">Contact</a>
-            <form action="/logout"
+            <a
+                    class="me-3 py-2 text-dark text-decoration-none" href="/about">About</a>
+            <a
+                    class="py-2 text-dark text-decoration-none" href="#">Contact</a>
+            <form th:action="@{/logout}"
                   method="post">
-                <input type="submit" name="text"
-                       value="Sign out"/>
+                <input type="submit"
+                       value="Sign Out"
+                       class="me-3 py-2 text-dark text-decoration-none"/>
             </form>
         </nav>
     </div>
