@@ -6,6 +6,10 @@
 
 <div class="container mt-5">
     <h1>Blogs</h1><br>
+    <form method="post" action="filter">
+        <input type="text" name="filter">
+        <button type="submit">Find post</button>
+    </form>
     <div th:each="el : ${posts}" class="alert alert-info mt-2">
         <h3 th:text="${el.title}"/>
         <p th:text="${el.anons}"/>

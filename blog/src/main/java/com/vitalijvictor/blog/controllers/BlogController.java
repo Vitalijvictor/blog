@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -88,5 +89,17 @@ public class BlogController {
                 });
         postRepository.delete(post);
         return "redirect:/blog";
+    }
+
+    @PostMapping("filter")
+    public String filter(@RequestParam String filter, Model model) {
+        Iterable<Posts> posts;
+        if (filter != null && !filter.isEmpty()) {
+            posts = postRepository.findByTitle(filter);
+        } else {
+            posts = postRepository.findAll();
+        }
+        model.addAttribute("posts", posts);
+        return "/blog";
     }
 }

@@ -1,6 +1,5 @@
 package com.vitalijvictor.blog;
 
-import com.vitalijvictor.blog.securingweb.SecuringWebApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
