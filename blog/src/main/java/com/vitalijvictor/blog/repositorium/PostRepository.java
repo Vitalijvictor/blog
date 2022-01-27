@@ -1,6 +1,6 @@
 package com.vitalijvictor.blog.repositorium;
 
-import com.vitalijvictor.blog.models.Posts;
+import com.vitalijvictor.blog.model.Posts;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

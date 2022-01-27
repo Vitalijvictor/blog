@@ -1,17 +1,14 @@
 package com.vitalijvictor.blog.controllers;
 
-import com.vitalijvictor.blog.models.Posts;
+import com.vitalijvictor.blog.model.Posts;
 import com.vitalijvictor.blog.repositorium.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -91,7 +88,7 @@ public class BlogController {
         return "redirect:/blog";
     }
 
-    @PostMapping("filter")
+    @GetMapping("/filter")
     public String filter(@RequestParam String filter, Model model) {
         Iterable<Posts> posts;
         if (filter != null && !filter.isEmpty()) {
@@ -101,5 +98,21 @@ public class BlogController {
         }
         model.addAttribute("posts", posts);
         return "/blog";
+    }
+
+    @RequestMapping("/variable-example1")
+    public String variableExample1(Model model, HttpServletRequest request) {
+        // variable1
+        model.addAttribute("variable1", "Value of variable1!");
+        // variable2
+        request.setAttribute("variable2", "Value of variable2!");
+        return "variable-example1";
+    }
+
+    @RequestMapping("/variable-in-loop")
+    public String objectServletContext(Model model, HttpServletRequest request) {
+        String[] flowers = new String[] {"Rose","Lily", "Tulip", "Carnation", "Hyacinth" };
+        model.addAttribute("flowers", flowers);
+        return "variable-in-loop";
     }
 }

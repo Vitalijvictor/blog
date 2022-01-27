@@ -1,4 +1,4 @@
-package com.vitalijvictor.blog.models;
+package com.vitalijvictor.blog.model;
 
 import org.springframework.data.annotation.Id;
 
